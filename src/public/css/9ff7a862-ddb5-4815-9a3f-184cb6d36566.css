@@ -1,0 +1,454 @@
+h2 {
+    color: aliceblue;
+}
+
+button {
+    border: none;
+    margin: 0;
+    outline: none;
+}
+
+body {
+    background-color: rgb(27, 26, 26);
+}
+
+main {
+    padding-bottom: 50px;
+}
+
+
+h2 {
+    margin-left: 9px;
+}
+
+header, .header {
+    background: none;
+}
+
+header {
+    box-shadow: 0 1px 6px rgb(175, 175, 175);
+}
+
+.estatic-zoom {
+    max-width: 98%;
+}
+a.logo{
+    color:#570f74;
+}
+
+
+/* -------------------------------------------------------- */
+
+/*                            LOGIN                         */
+
+/* -------------------------------------------------------- */
+
+
+
+/* -------------------------------------------------------- */
+
+/*                            home                          */
+
+/* -------------------------------------------------------- */
+
+/* Corpo */
+
+.grid13 {
+    display: grid;
+    grid-template-columns: auto;
+}
+
+.table-container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 9px;
+    justify-content: center;
+}
+
+.table-container>a {
+    width: 24%;
+    padding: 8px;
+    font-size: 1.1rem;
+    background-color: rgb(0, 0, 116);
+    text-align: center;
+    margin-bottom: 10px;
+    color: rgb(241, 236, 236);
+    border-radius: 3px;
+    font-weight: 600;
+    border: solid 1.2px rgb(218, 204, 204);
+}
+
+.table-container>a:hover {
+    background-color: rgb(0, 0, 161);
+}
+
+/* Search e paginate */
+
+.paginate-search {
+    display: flex;
+    width: 100%;
+    background-color: rgb(26, 23, 23);
+    /* margin-bottom: 16px; */
+    color: white;
+    /* align-items: center; */
+    padding: 16px 7px;
+    border-radius: 8px 8px 0 0;
+}
+
+.paginate-search>#search {
+    padding: 3px;
+    background-color: rgb(184, 184, 184);
+    border-radius: 4px;
+}
+
+.paginate-search>#search input {
+    font-size: 1.05rem;
+    padding: 4px 8px;
+    border: solid 1.5px rgb(14, 10, 17);
+    border-radius: 3px;
+    outline: none;
+    background-color: #fcfcfc;
+}
+
+.paginate-search>#search input[type="search"] {
+    width: 350px;
+}
+
+.paginate-search>#search input[type="button"] {
+    cursor: pointer;
+}
+
+.paginate-search>#search input[type="search"]:focus, #paginate-search>#search input[type="search"]:hover {
+    box-shadow: 0px 0px 0px 1.5px rgb(7, 4, 24);
+    background-color: #ffffff;
+}
+
+.paginate-search>#search input[type="button"]:hover {
+    box-shadow: 0px 0px 0px 1.5px rgb(7, 4, 24);
+    background-color: rgb(0, 0, 0);
+    color: #ffffff;
+}
+
+.paginate-search>#paginate {
+    display: flex;
+    margin-left: 8px;
+    margin-top: auto;
+    padding: 3px;
+    background-color: rgb(184, 184, 184);
+    border-radius: 4px;
+    align-items: flex-end;
+}
+
+.paginate-search>#paginate button {
+    font-size: 1rem;
+    height: 30px;
+    width: 40px;
+    background-color: #fcfcfc;
+    color: black;
+    border: solid 1px rgb(0, 0, 0);
+    border-radius: 2px;
+    margin: 0 3px;
+    cursor: pointer;
+}
+
+.paginate-search>#paginate span {
+    font-size: 1rem;
+    color: black;
+    margin: 0 3px;
+    padding-bottom: 1px;
+}
+
+.paginate-search>#paginate button:hover, .paginate-search>#paginate button:focus {
+    box-shadow: 0px 0px 0px 0.8px rgb(7, 4, 24);
+    background-color: #ffffff;
+    background-color: rgb(0, 0, 0);
+    color: #ffffff;
+}
+
+.paginate-search>#paginate button:disabled {
+    box-shadow: 0px 0px 0px 0.8px rgb(7, 4, 24);
+    background-color: #ffffff;
+    background-color: rgb(0, 0, 0);
+    color: #ffffff;
+    cursor: initial;
+}
+
+/* Tabela */
+
+#table-games {
+    border-collapse: collapse;
+    width: 100%;
+    color: black;
+    background-color: rgb(255, 255, 255);
+}
+
+#table-games td, #table-games th {
+    border: 1px solid rgb(56, 56, 56);
+    padding: 8px;
+}
+
+#table-games tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+#table-games tr:hover {
+    background-color: #ddd;
+}
+
+#table-games th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #02008a;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 500;
+    text-align: center;
+}
+
+#table-games img {
+    display: block;
+    max-width: 70px;
+    margin: 0 auto;
+}
+
+#table-games #desc {
+    margin: 0 auto;
+    overflow: hidden;
+    /* text-overflow: ellipsis; */
+    /* display: -webkit-box; */
+    /* -webkit-line-clamp: 5; */
+    /* number of lines to show */
+    /* -webkit-box-orient: vertical; */
+    width: 300px;
+    text-align: justify;
+}
+/* 
+#td-desc:hover #desc {
+    width: 300px;
+    overflow: initial;
+    text-overflow: initial;
+    display: block;
+    -webkit-line-clamp: initial;
+} */
+
+#table-games #options, .td-center {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    width: 50px;
+    justify-content: center;
+}
+
+.td-center a {
+    border: solid 1px rgb(0, 0, 216);
+    padding: 4px;
+    color: rgb(241, 231, 231);
+    background-color: rgb(27, 27, 27);
+    border-radius: 2px;
+}
+
+.td-center a:hover {
+    color: rgb(255, 255, 255);
+    background-color: rgb(12, 12, 12);
+}
+td>a{
+    color: #02008a;
+    text-decoration:underline;
+    outline: none;
+}   
+td>a:hover{
+    color: #360074;
+}
+td {
+    text-align: center;
+    
+}
+
+#table-games #options>button {
+    width: 100%;
+    text-align: center;
+    padding: 5px;
+    margin: 3px;
+    border-radius: 2px;
+    cursor: pointer;
+    border: solid 1px black;
+    outline: none;
+    color: rgb(19, 19, 19);
+}
+
+#table-games #options>button:nth-child(1) {
+    background-color: rgb(101, 0, 196);
+}
+
+#table-games #options>button:nth-child(2) {
+    background-color: rgb(196, 0, 0);
+}
+
+#table-games #options>button:nth-child(1):hover {
+    background-color: rgb(89, 0, 255);
+}
+
+#table-games #options>button:nth-child(2):hover {
+    background-color: rgb(235, 2, 2);
+}
+
+/* -------------------------------------------------------- */
+
+/*                            Game                          */
+
+/* -------------------------------------------------------- */
+
+.img label {
+    font-size: 18px;
+    margin-top: 37px;
+
+}
+.img > div{
+    margin: 6px 0 30px 0;
+}
+.img > div > div{
+    margin-top: 5px;
+}
+
+.inative-btn-down, .inative-btn-down:hover {
+    background-color: #5e5e5e;
+    color: #aaaaaa;
+    cursor: initial;
+}
+.inative-btn-down span{
+    background-color: #3b3b3b;
+}
+
+fieldset {
+    padding: 10px 5px 10px 0;
+}
+
+fieldset textarea {
+    resize: vertical;
+    overflow: hidden;
+}
+form input, form textarea, .label-input-inline > div {
+    width: 100%;
+    font-size: 15px;
+    outline: none;
+    border: solid 2px black;
+    padding: 3px;
+    border-radius: 2.3px;
+    background-color: rgb(250, 250, 250);
+    color: black;
+
+}
+
+input.accepted, input.accepted:focus{
+    border-color: #038b21;
+    box-shadow: 0px 0px 0px 1.5px rgb(0, 168, 65);
+}
+input.refused, input.refused:focus{
+    border-color: #a70000;
+    box-shadow: 0px 0px 0px 1.5px rgb(161, 0, 13);
+}
+
+label {
+    white-space: nowrap;
+}
+
+form input:focus, form textarea:focus {
+    box-shadow: 0px 0px 0px 1.5px rgb(3, 75, 207);
+}
+
+.info input:not([type="date"], [type="radio"]), .info textarea,.label-input-inline > div {
+    width: 90%;
+}
+form input[type="radio"]{
+    width: auto;
+}
+.label-input-inline > div > label {
+    color: black;
+    margin: 0 13px 0 2px ;
+}
+form input[type="date"] {
+    width: 14%;
+    margin-right: auto;
+}
+
+.label-input-inline {
+    display: flex;
+    align-items: center;
+    margin-bottom: 6px;
+    justify-content: space-between;
+}
+
+
+.label-input-inline label {
+    margin-right: 3px;
+}
+
+#inputs-sc{
+    margin-top: 4px;
+    display: flex;
+    width: 100%;
+    background-color: #e3e3f0;
+}
+
+#inputs-sc  div{
+    margin: 2px;
+    color: rgb(15, 12, 12);
+    font-size: 14px;
+}
+#inputs-sc button{
+    padding: 3px 0;
+    text-align: center;
+    font-size: 1.2rem;
+    width: 100%;
+    background-color: #a70000;
+    margin: 2px 0;
+    cursor: pointer;
+    border: solid 2px white;
+    border-radius: 3px;
+}
+#inputs-sc button:hover{
+    border: solid 2px rgb(68, 68, 68);
+    background-color: #c20000;
+}
+
+
+#submit-container{
+    display: flex;
+    background-color: rgb(26, 22, 22);
+    border: 3px solid rgb(99, 0, 0);
+    border-radius: 6px;
+    margin-top: 0.8rem;
+
+}
+
+#submit-container > input{
+    background-color: #02592d;
+    font-size: 20px;
+    width: auto;
+    font-weight: 600;
+    padding: 12px 26px;
+    cursor: pointer;
+    margin: 20px auto;
+    color: #fcfcfc;
+    border-color: #0f0f0f;
+}
+#submit-container > input.editar{
+    background-color: #747200;
+    color: #fcfcfc;
+    border-color: #0f0f0f;
+}
+
+#submit-container > input.editar:hover{
+    background-color: #9aa500;
+    color: #f0eaea;
+}
+
+#submit-container > input:hover{
+    background-color: #038b21;
+    color: #f0eaea;
+}
+#submit-container > input:disabled{
+    background-color: #454b48;
+    cursor: inherit;
+}

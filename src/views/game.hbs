@@ -1,0 +1,173 @@
+{{> header}}
+
+<form {{#if _id}}action="{{_id}}/edit" {{else}}action="/game" {{/if}} method="post" id="form-create-game"
+    enctype="multipart/form-data">
+
+    {{#if _id}}
+    <input type="text" name="_id" value="{{_id}}" hidden>
+    {{/if}}
+
+    <main class="estatic-zoom  separete">
+
+        <section class="container">
+
+            <div class="img">
+                <h1 id="tittle-here">Tittle</h1>
+                <img id="img-cover"
+                    src="{{#if imgs.cover.imgURL}}{{imgs.cover.imgURL}}{{else}}/img/uploads/capa-exemple.png{{/if}}"
+                    alt="">
+                <div>
+                    <label for="cover">Capa: </label>
+                    <input type="file" name="cover" id="cover" accept="image/png, image/jpeg">
+                </div>
+
+                <div>
+                    <a class="btn-down inative-btn-down" id="btn-down" href="javascript:void(0)" target="_blank"><i
+                            class="fa fa-download"></i> DOWNLOAD <span id="here-size-game"></span></a>
+                    <div>
+                        <label for="link_download">Link para download: </label>
+                        <input type="text" name="link_download" id="link_download"
+                            placeholder="https://download.h-natsu.com/windows/game" value="{{link_download}}">
+                    </div>
+                </div>
+            </div>
+            <div class="info-desc-imgs-comments">
+                <div class="info-desc">
+                    <section class="info">
+                        <fieldset>
+                            <legend>Informações</legend>
+                            <div class="label-input-inline">
+                                <label for="gameURL">URL: <br><span class="form-vali"></span></label>
+                                <input type="text" name="gameURL" id="gameURL" placeholder="tittle-subtittle-...-..."
+                                    value="{{gameURL}}" required>
+                            </div>
+                            <div class="label-input-inline">
+                                <label for="tittle">Tittle: <br><span class="form-vali"></span></label>
+                                <textarea name="tittle" id="tittle" placeholder="Tittle" rows="2"
+                                    required>{{tittle}}</textarea>
+                            </div>
+                            <div class="label-input-inline">
+                                <label for="type">Type: <br><span class="form-vali"></span></label>
+                                <input type="text" name="type" placeholder="Type" value="{{type}}" required>
+                            </div>
+                            <div class="label-input-inline">
+                                <label for="lingue">Language: <br><span class="form-vali"></span></label>
+                                <input type="text" name="language" placeholder="Language" value="{{language}}">
+                            </div>
+                            <div class="label-input-inline">
+                                <label for="censorship">Censorship: <br><span class="form-vali"></span></label>
+                                <input type="text" name="censorship" placeholder="Censorship" value="{{censorship}}">
+                            </div>
+                            <div class="label-input-inline">
+                                <label for="release_date">Release Date: <br><span class="form-vali"></span></label>
+                                <input type="date" name="release_date" value="{{release_date}}">
+                            </div>
+                            <div class="label-input-inline">
+                                <label for="size">Size: <br><span class="form-vali"></span></label>
+                                <input type="text" name="size" id="size-game" placeholder="100MB, 1.1GB..."
+                                    value="{{size}}">
+                            </div>
+                            <div class="label-input-inline">
+                                <label for="tags">Tags: <br><span class="form-vali"></span></label>
+                                <input type="text" name="tags" placeholder="tag, tag, tag..." value="{{tags}}">
+                            </div>
+                            <div class="label-input-inline">
+                                <label for="paltform">Platform: <br><span class="form-vali"></span></label>
+                                <div data-checked="{{platform}}" id="platforms">
+                                    <input type="radio" name="platform" id="windows" value="Windows" checked
+                                        required><label for="windows">Windows</label>
+                                    <input type="radio" name="platform" value="Android" id="android" required><label
+                                        for="windows">Android</label>
+                                </div>
+                            </div>
+
+                        </fieldset>
+                    </section>
+                    <section class="desc">
+                        <fieldset>
+                            <legend>Descrição</legend>
+
+                            <textarea name="description" placeholder="Description..." rows="13"
+                                required>{{description}}</textarea>
+
+                        </fieldset>
+                    </section>
+                </div>
+                <hr>
+                <div class="imgs-others">
+                    <h1>Screnshorts</h1>
+                    <div class="row-imgs" id="screenshorts">
+                        <div class="column-imgs">
+                            <img class="hover-shadow cursor screenshort"
+                                src="{{#if imgs.screenshorts.[0].imgURL}}{{imgs.screenshorts.[0].imgURL}}{{else}}/img/uploads/screenshort-exemple.png{{/if}}"
+                                alt="">
+                        </div>
+                        <div class="column-imgs">
+                            <img class="hover-shadow cursor screenshort"
+                                src="{{#if imgs.screenshorts.[1].imgURL}}{{imgs.screenshorts.[1].imgURL}}{{else}}/img/uploads/screenshort-exemple.png{{/if}}"
+                                alt="">
+                        </div>
+                        <div class="column-imgs">
+                            <img class="hover-shadow cursor screenshort"
+                                src="{{#if imgs.screenshorts.[2].imgURL}}{{imgs.screenshorts.[2].imgURL}}{{else}}/img/uploads/screenshort-exemple.png{{/if}}"
+                                alt="">
+                        </div>
+                        <div class="column-imgs">
+                            <img class="hover-shadow cursor screenshort"
+                                src="{{#if imgs.screenshorts.[3].imgURL}}{{imgs.screenshorts.[3].imgURL}}{{else}}/img/uploads/screenshort-exemple.png{{/if}}"
+                                alt="">
+                        </div>
+                    </div>
+                    <div id="myModal" class="modal">
+                        <span class="close" onclick="closeModal()">&times;</span>
+                        <div id="modal-content">
+                            <img src="" id="modalImage" alt="">
+                        </div>
+                    </div>
+                    <div id="inputs-sc">
+                        <div>
+                            <input type="file" name="screenshort" accept="image/png, image/jpeg">
+                            <button type="button" onclick="resetInFileImgs(0, this)"
+                                data-img="{{#if imgs.screenshorts.[0].imgURL}}{{imgs.screenshorts.[0].imgURL}}{{else}}/img/uploads/screenshort-exemple.png{{/if}}"><i
+                                    class="far fa-times-circle"></i></button>
+                            {{#if _id}}
+                            <input type="checkbox" name="imgModified" value="0" hidden>
+                            {{/if}}
+                        </div>
+                        <div>
+                            <input type="file" name="screenshort" accept="image/png, image/jpeg">
+                            <button type="button" onclick="resetInFileImgs(1, this)"
+                                data-img="{{#if imgs.screenshorts.[1].imgURL}}{{imgs.screenshorts.[1].imgURL}}{{else}}/img/uploads/screenshort-exemple.png{{/if}}"><i
+                                    class="far fa-times-circle"></i></button>
+                            {{#if _id}}
+                            <input type="checkbox" name="imgModified" value="1" hidden>
+                            {{/if}}
+                        </div>
+                        <div>
+                            <input type="file" name="screenshort" accept="image/png, image/jpeg">
+                            <button type="button" onclick="resetInFileImgs(2, this)"
+                                data-img="{{#if imgs.screenshorts.[2].imgURL}}{{imgs.screenshorts.[2].imgURL}}{{else}}/img/uploads/screenshort-exemple.png{{/if}}"><i
+                                    class="far fa-times-circle"></i></button>
+                            {{#if _id}}
+                            <input type="checkbox" name="imgModified" value="2" hidden>
+                            {{/if}}
+                        </div>
+                        <div>
+                            <input type="file" name="screenshort" accept="image/png, image/jpeg">
+                            <button type="button" onclick="resetInFileImgs(3, this)"
+                                data-img="{{#if imgs.screenshorts.[3].imgURL}}{{imgs.screenshorts.[3].imgURL}}{{else}}/img/uploads/screenshort-exemple.png{{/if}}"><i
+                                    class="far fa-times-circle"></i></button>
+                            {{#if _id}}
+                            <input type="checkbox" name="imgModified" value="3" hidden>
+                            {{/if}}
+                        </div>
+                    </div>
+
+                </div>
+        </section>
+        <div id="submit-container">
+            <input type="submit" class="{{#if _id}}editar{{/if}}"
+                value="{{#if _id}}EDITAR{{else}}CRIAR NOVO{{/if}}  GAME" id="create-new-game">
+        </div>
+    </main>
+</form>

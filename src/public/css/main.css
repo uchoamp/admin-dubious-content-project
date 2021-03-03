@@ -1,0 +1,21 @@
+@import url("geral.css");
+@import url("header-nav.css");
+@import url("home-pages.css");
+@import url("form.css");
+@import url("games.css");
+@import url("media.css");
+
+:root{
+    /* cores */
+    --preto: #101010;
+    --roxo1: #6859a7;
+    --roxo2: #8454a3;
+    --roxo3: #9751a0;
+    --branco: #eeeeee;
+    --footer-color: #8454a3;
+
+    /* espaçamentos */
+    --game-center-right-conts: 0.4rem;
+}
+
+@viewport { width: auto; }

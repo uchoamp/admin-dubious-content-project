@@ -1,0 +1,89 @@
+/*  Form CSS  */
+
+.form-container {
+  background-color: rgb(252, 252, 255);
+  width: 350px;
+  margin:3rem auto 0 auto;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0px 8px rgb(48, 46, 46);
+}
+.isLogin{
+  margin:7rem auto 0 auto;
+}
+.form-container>a{
+  display: block;
+  width: 100%;
+  text-align: center;
+  font-size: 3.3rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  text-decoration: none;
+  color:#280068;
+  outline: none;
+  line-height:2rem; 
+}
+.form-container>a>span{
+
+  font-size: 2rem;
+}
+.form-container form {
+  font-size: 18px;
+  width: 100%;
+}
+.form-container .nav-hsl{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0.6rem; 
+}
+.form-container .nav-hsl a{
+  outline: none;
+  text-decoration: underline;
+}
+
+.form-container h2 {
+  text-align: center;
+  font-size: 1.5rem;
+  color: rgb(15, 15, 15);
+}
+
+.form-container input[type="email"], .form-container input[type="text"], .form-container input[type="password"], .form-container input[type="date"] {
+  font-size: 16px;
+  width: 100%;
+  padding: 11px 4px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.form-container input[type="date"], input[type="time"] {
+  font-family: Arial, sans-serif;
+}
+
+.form-container input[type=submit] {
+  width: 100%;
+  background-color: #013c80;
+  color: rgb(245, 255, 233);
+  font-size: 1.2rem;
+  padding: 10px 0;
+  margin: 8px auto;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 550;
+}
+
+.form-container input[type=submit]:hover {
+  background-color: #09008b;
+}
+
+.form-vali {
+  color: #910000;
+  font-size: 16px;
+  text-align: center;
+}
+
+/*  Form CSS  */
