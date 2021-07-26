@@ -78,7 +78,7 @@ gameCtrl.createGame = async (req, res) => {
             cover = undefined;
         if (coversFiles) {
             const resultCover = await cloudinary.uploader.upload(coversFiles[0].path, { folder: "games/covers", tags: imgTags });
-            cover = { imgURL: resultCover.url, public_id: resultCover.public_id };
+            cover = { imgURL: resultCover.secure_url, public_id: resultCover.public_id };
             toDestroy.push(cover.public_id);
             await removeImg(coversFiles[0].path);
         }
@@ -91,7 +91,7 @@ gameCtrl.createGame = async (req, res) => {
             for (let i = 0; i < screenshortsFiles.length; i++) {
                 let screenshortPath = screenshortsFiles[i].path;
                 const resultScreenshort = await cloudinary.uploader.upload(screenshortPath, { folder: "games/screenshorts", tags: imgTags })
-                screenshorts[i] = { imgURL: resultScreenshort.url, public_id: resultScreenshort.public_id };
+                screenshorts[i] = { imgURL: resultScreenshort.secure_url, public_id: resultScreenshort.public_id };
                 toDestroy.push(screenshorts[i].public_id);
 
                 await removeImg(screenshortPath)
